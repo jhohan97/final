@@ -1,0 +1,72 @@
+
+> Task :app:signingReport
+Variant: debug
+Config: debug
+Store: C:\Users\Jhohan David\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 8B:88:FA:84:07:28:13:CF:32:77:EA:A4:80:68:CB:ED
+SHA1: FA:0A:42:DF:FA:62:F7:1A:D8:70:64:85:4F:4F:0A:70:0A:57:D9:DD
+SHA-256: 2C:8B:3D:D9:DD:13:8E:FD:6E:07:18:2C:33:31:8A:8D:6A:6A:6F:FD:A2:50:C9:25:55:3B:24:38:1A:7C:3B:98
+Valid until: lunes 16 de octubre de 2051
+----------
+Variant: release
+Config: debug
+Store: C:\Users\Jhohan David\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 8B:88:FA:84:07:28:13:CF:32:77:EA:A4:80:68:CB:ED
+SHA1: FA:0A:42:DF:FA:62:F7:1A:D8:70:64:85:4F:4F:0A:70:0A:57:D9:DD
+SHA-256: 2C:8B:3D:D9:DD:13:8E:FD:6E:07:18:2C:33:31:8A:8D:6A:6A:6F:FD:A2:50:C9:25:55:3B:24:38:1A:7C:3B:98
+Valid until: lunes 16 de octubre de 2051
+----------
+Variant: profile
+Config: debug
+Store: C:\Users\Jhohan David\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 8B:88:FA:84:07:28:13:CF:32:77:EA:A4:80:68:CB:ED
+SHA1: FA:0A:42:DF:FA:62:F7:1A:D8:70:64:85:4F:4F:0A:70:0A:57:D9:DD
+SHA-256: 2C:8B:3D:D9:DD:13:8E:FD:6E:07:18:2C:33:31:8A:8D:6A:6A:6F:FD:A2:50:C9:25:55:3B:24:38:1A:7C:3B:98
+Valid until: lunes 16 de octubre de 2051
+----------
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\Jhohan David\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 8B:88:FA:84:07:28:13:CF:32:77:EA:A4:80:68:CB:ED
+SHA1: FA:0A:42:DF:FA:62:F7:1A:D8:70:64:85:4F:4F:0A:70:0A:57:D9:DD
+SHA-256: 2C:8B:3D:D9:DD:13:8E:FD:6E:07:18:2C:33:31:8A:8D:6A:6A:6F:FD:A2:50:C9:25:55:3B:24:38:1A:7C:3B:98
+Valid until: lunes 16 de octubre de 2051
+----------
+Variant: debugUnitTest
+Config: debug
+Store: C:\Users\Jhohan David\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 8B:88:FA:84:07:28:13:CF:32:77:EA:A4:80:68:CB:ED
+SHA1: FA:0A:42:DF:FA:62:F7:1A:D8:70:64:85:4F:4F:0A:70:0A:57:D9:DD
+SHA-256: 2C:8B:3D:D9:DD:13:8E:FD:6E:07:18:2C:33:31:8A:8D:6A:6A:6F:FD:A2:50:C9:25:55:3B:24:38:1A:7C:3B:98
+Valid until: lunes 16 de octubre de 2051
+----------
+Variant: releaseUnitTest
+Config: debug
+Store: C:\Users\Jhohan David\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 8B:88:FA:84:07:28:13:CF:32:77:EA:A4:80:68:CB:ED
+SHA1: FA:0A:42:DF:FA:62:F7:1A:D8:70:64:85:4F:4F:0A:70:0A:57:D9:DD
+SHA-256: 2C:8B:3D:D9:DD:13:8E:FD:6E:07:18:2C:33:31:8A:8D:6A:6A:6F:FD:A2:50:C9:25:55:3B:24:38:1A:7C:3B:98
+Valid until: lunes 16 de octubre de 2051
+----------
+Variant: profileUnitTest
+Config: debug
+Store: C:\Users\Jhohan David\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 8B:88:FA:84:07:28:13:CF:32:77:EA:A4:80:68:CB:ED
+SHA1: FA:0A:42:DF:FA:62:F7:1A:D8:70:64:85:4F:4F:0A:70:0A:57:D9:DD
+SHA-256: 2C:8B:3D:D9:DD:13:8E:FD:6E:07:18:2C:33:31:8A:8D:6A:6A:6F:FD:A2:50:C9:25:55:3B:24:38:1A:7C:3B:98
+Valid until: lunes 16 de octubre de 2051
+----------
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 7.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/6.7/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 1s
+1 actionable task: 1 executed
