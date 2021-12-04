@@ -1,69 +1,61 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:parcial_final/screens/home_screen.dart';
+import 'package:parcial_final/screens/login_screen.dart';
+import 'package:parcial_final/screens/wait_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import 'models/token.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool _isLoading = true;
+  bool _showLoginPage = true;
+  late Token _token;
+
+  @override
+  void initState() {
+    super.initState();
+    _getHome();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Material App Bar'),
-        ),
-        body: Stack(
-          children: <Widget>[
-            SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  SizedBox(
-                    height: 40,
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  _showFBButton(),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      title: 'Examen final App',
+      home: _isLoading
+          ? WaitScreen()
+          : _showLoginPage
+              ? LoginScreen()
+              : HomeScreen(token: _token),
     );
   }
 
-  Widget _showFBButton() {
-    return Row(
-      children: <Widget>[
-        Expanded(
-            child: ElevatedButton.icon(
-                onPressed: () => _loginFb(),
-                icon: FaIcon(
-                  FontAwesomeIcons.facebook,
-                  color: Colors.white,
-                ),
-                label: Text('Iniciar sesión con Facebook'),
-                style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF3B5998), onPrimary: Colors.white)))
-      ],
-    );
-  }
-
-  void _loginFb() async {
-    await FacebookAuth.i.logOut();
-    var result = await FacebookAuth.i.login(
-      permissions: ["public_profile", "email"],
-    );
-
-    if (result.status == LoginStatus.success) {
-      final requestData = await FacebookAuth.i.getUserData(
-        fields:
-            "email, name, picture.width(800).heigth(800), first_name, last_name",
-      );
-      print(requestData);
+  void _getHome() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool isRemembered = prefs.getBool('isRemembered') ?? false;
+    if (isRemembered) {
+      String? userBody = prefs.getString('userBody');
+      if (userBody != null) {
+        var decodedJson = jsonDecode(userBody);
+        _token = Token.fromJson(decodedJson);
+        if (DateTime.parse(_token.expiration).isAfter(DateTime.now())) {
+          _showLoginPage = false;
+        }
+      }
     }
+
+    _isLoading = false;
+    setState(() {});
   }
 }
